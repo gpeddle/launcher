@@ -1,0 +1,15 @@
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/bin/Debug/net8.0/DisplayMain
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/bin/Debug/net8.0/DisplayMain.deps.json
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/bin/Debug/net8.0/DisplayMain.runtimeconfig.json
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/bin/Debug/net8.0/DisplayMain.dll
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/bin/Debug/net8.0/DisplayMain.pdb
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.AssemblyInfoInputs.cache
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.AssemblyInfo.cs
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.csproj.CoreCompileInputs.cache
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.sourcelink.json
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.dll
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/refint/DisplayMain.dll
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.pdb
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/DisplayMain.genruntimeconfig.cache
+/Users/gpeddle/repos/github/gpeddle/launcher/DisplayMain/obj/Debug/net8.0/ref/DisplayMain.dll

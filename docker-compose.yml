@@ -1,0 +1,16 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:  # Optional: Environment variables
+      - API_KEY=yourapikey
+    volumes:  # Optional: For development with live reloading
+      - ./backend:/app
+    # networks:  # Optional: For complex setups with multiple services
+    #   - your-custom-network
+
+# networks:  # Uncomment and define if using custom networks
+#   your-custom-network:
