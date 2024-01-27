@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1d7ad5fe-c7c3-4922-8766-4f6e8b0880dc",
+    "name": "display01",
+    "description": "East Wing",
+    "web_app": "webapp1",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "d879023e-ceab-480b-bf24-9d94baa3a5ef",
+    "name": "display02",
+    "description": "West Wing",
+    "web_app": "webapp2",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "aa143959-0e7a-48b6-9e8c-c8a68e9bef52",
+    "name": "display03",
+    "description": "Service Area",
+    "web_app": "webapp1",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "791c4857-9dd6-4f1f-a2f4-7f0f658ef1c8",
+    "name": "display04",
+    "description": "Parking Lot",
+    "web_app": "webapp2",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "4e37b198-fe02-43e9-90ad-746e33d7dffa",
+    "name": "display05",
+    "description": "Northeast corridor",
+    "web_app": "webapp1",
+    "status": "active",
+    "api_key": "BAD_KEY",
+    "challenge_code": "ABC123"
+  },
+  {
+    "id": "5cf4406c-aca6-4b53-915a-7db51bc564f6",
+    "name": "display06",
+    "description": "Southwest corridor",
+    "web_app": "webapp2",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "37d13b1b-3418-46b9-a681-fd1f60eba5ec",
+    "name": "display07",
+    "description": "North hallway",
+    "web_app": "webapp1",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "d79a3fe1-f7dd-43d4-a9ad-54355d547a14",
+    "name": "display08",
+    "description": "South hallway",
+    "web_app": "webapp2",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "35e890cc-d919-428b-84e4-76eaa61ca835",
+    "name": "display09",
+    "description": "Reception",
+    "web_app": "webapp1",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  },
+  {
+    "id": "acfb9623-30fe-44f4-990f-7291328bf827",
+    "name": "display10",
+    "description": "Lobby",
+    "web_app": "webapp2",
+    "status": "active",
+    "api_key": "VALID_KEY",
+    "challenge_code": null
+  }
+]
