@@ -5,7 +5,7 @@ import string
 import secrets
 
 from data.display_repository import DisplayRepository
-from models.display import Display
+from models.display import Display, DisplayStatusEnum
 
 app = FastAPI()
 data = DisplayRepository('displays.db')
@@ -61,13 +61,11 @@ async def check_display_auth(id: str, web_app: str, api_key: str):
     if display.api_key == api_key:
         status = {"status": "Success"}
     else:
-        # Provide an activation challenge code in case of failure
-        challenge_code = generate_challenge_code()
-        display.api_key = None
-        display.challenge_code = challenge_code
-        display.status = 'disabled'
+        status = {"status": "Failure"}
+        display.status = DisplayStatusEnum.pending
+        display.challenge_code = generate_challenge_code()
         data.update(display)
-        status = {"status": "Disabled", "message": challenge_code}
+        status['challenge_code'] = display.challenge_code
 
     return status
 
@@ -97,15 +95,15 @@ async def activate_display(id: str, web_app: str, challenge_code: str):
     # Check if the challenge code matches the expected code for activation
     status = None
     if challenge_code == display.challenge_code:
-        display.status = 'authorized'
+        display.status = DisplayStatusEnum.active
         display.challenge_code = None
+        display.api_key = generate_api_key()  
         data.update(display)
-        status = {"status": "Success",
-                  "message": "Display activated successfully"}
-    else:
-        status = {"status": "Failure",
-                  "message": "Activation failed. Invalid challenge code."}
-
+        status = {
+            "status": "Success",
+            "message": "Display activated successfully",
+            "api_key": display.api_key  
+        }
     return status
 
 
@@ -132,6 +130,11 @@ def generate_challenge_code():
     characters = string.ascii_letters + string.digits
     code = ''.join(secrets.choice(characters) for _ in range(6)).upper()
     return code
+
+def generate_api_key():
+    characters = string.ascii_letters + string.digits
+    key = ''.join(secrets.choice(characters) for _ in range(32))
+    return key
 
 
 if __name__ == "__main__":
