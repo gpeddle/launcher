@@ -15,5 +15,7 @@ services:
     build:
       context: ./tests
       dockerfile: Dockerfile.tests  # Create a new Dockerfile for running tests
+    environment:
+      - HOST_IP=${HOST_IP}
     command: ["pytest", "/tests"]  # Run pytest for your tests
 

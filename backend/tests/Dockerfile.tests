@@ -1,11 +1,14 @@
 # Dockerfile for running tests
 FROM python:3.8
 
-WORKDIR /app
+WORKDIR /tests
 
+COPY ./run_tests.sh run_tests.sh 
+COPY ./test_app.py test_app.py
+COPY ./pytest.ini pytest.ini
 COPY ./requirements.txt requirements.txt
+
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /app
-
-CMD ["pytest", "/app/tests"]
+# Set the script as the entry point
+ENTRYPOINT ["/tests/run_tests.sh"]

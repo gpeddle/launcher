@@ -11,6 +11,8 @@ app = FastAPI()
 data = DisplayRepository('displays.db')
 data.load_initial_data('initial-data.json')
 
+
+
 # Get a list of displays
 
 
@@ -92,6 +94,9 @@ async def activate_display(id: str, web_app: str, challenge_code: str):
     if display.web_app != web_app:
         return {"status": "Failure", "message": "Display not found"}
 
+    if challenge_code != display.challenge_code:
+        return {"status": "Failure", "message": "Invalid challenge code"}
+
     # Check if the challenge code matches the expected code for activation
     status = None
     if challenge_code == display.challenge_code:
@@ -124,6 +129,7 @@ async def disable_display(id: str):
     display.status = 'disabled'
     data.update(display)
     return {"status": "Success", "message": "Display disabled successfully"}
+
 
 
 def generate_challenge_code():
